@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15 Anos — Izabela Souza Santos</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap");
+      :root {
+        --bege: #f5f0e8;
+        --creme: #fffdf8;
+        --dourado: #b58a3a;
+        --dourado-claro: #d8bb7a;
+        --marrom: #4d4035;
+        --cinza: #777067;
+        --linha: #ded4c5;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--bege);
+        color: var(--marrom);
+        font-family: Montserrat, sans-serif;
+        line-height: 1.7;
+      }
+      .convite {
+        max-width: 900px;
+        margin: 30px auto;
+        background: var(--creme);
+        box-shadow: 0 15px 50px rgba(80, 65, 45, 0.12);
+        overflow: hidden;
+      }
+      .hero {
+        min-height: 680px;
+        padding: 70px 55px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(181, 138, 58, 0.12),
+            transparent 35%
+          ),
+          #fffdf8;
+      }
+      .hero-imagem {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 48%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .hero-imagem:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          #fffdf8 0%,
+          rgba(255, 253, 248, 0.82) 12%,
+          rgba(255, 253, 248, 0.15) 45%,
+          rgba(255, 253, 248, 0) 100%
+        );
+      }
+      .hero-imagem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .hero-conteudo {
+        position: relative;
+        z-index: 2;
+        width: 62%;
+        text-align: left;
+      }
+      .detalhe {
+        width: 65px;
+        height: 1px;
+        background: var(--dourado);
+        margin-bottom: 30px;
+      }
+      .frase {
+        max-width: 600px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 5vw, 3.7rem);
+        font-weight: 500;
+        line-height: 1.08;
+        color: var(--marrom);
+      }
+      .subfrase {
+        max-width: 470px;
+        margin-top: 30px;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: var(--cinza);
+      }
+      .nome {
+        margin-top: 38px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.4rem, 5vw, 4.2rem);
+        line-height: 1;
+        color: var(--dourado);
+      }
+      .idade {
+        margin-top: 12px;
+        font-size: 0.75rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--cinza);
+      }
+      .conteudo {
+        padding: 70px clamp(25px, 7vw, 80px);
+      }
+      .titulo-secao {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--dourado);
+      }
+      .titulo-secao:after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: var(--linha);
+      }
+      .entrada {
+        margin-bottom: 55px;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.55rem;
+        line-height: 1.5;
+      }
+      .info-box {
+        background: var(--bege);
+        padding: 35px;
+        border-left: 3px solid var(--dourado);
+      }
+      .info {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 16px 25px;
+        align-items: start;
+      }
+      .info strong {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--dourado);
+      }
+      .info span {
+        font-size: 0.9rem;
+        color: var(--marrom);
+      }
+      .endereco {
+        line-height: 1.6;
+      }
+      .botoes {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .botao {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 22px;
+        text-decoration: none;
+        border: 1px solid var(--dourado);
+        color: var(--dourado);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: 0.3s;
+        background: transparent;
+      }
+      .botao:hover {
+        background: var(--dourado);
+        color: white;
+      }
+      .destaques {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 30px;
+      }
+      .card {
+        padding: 25px;
+        border: 1px solid var(--linha);
+        background: #fffefa;
+      }
+      .card h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        color: var(--dourado);
+        margin-bottom: 8px;
+      }
+      .card p {
+        font-size: 0.85rem;
+        color: var(--cinza);
+      }
+      .presentes {
+        margin-top: 65px;
+        padding: 40px;
+        background: var(--bege);
+        border: 1px solid var(--linha);
+      }
+      .presentes-lista {
+        list-style: none;
+        display: grid;
+        gap: 12px;
+        margin-top: 25px;
+      }
+      .presentes-lista li {
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--linha);
+        font-size: 0.9rem;
+      }
+      .pix {
+        margin-top: 30px;
+        padding: 22px;
+        background: var(--creme);
+        border: 1px solid var(--dourado-claro);
+      }
+      .pix strong {
+        color: var(--dourado);
+      }
+      .pix-chave {
+        margin-top: 8px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        word-break: break-all;
+      }
+      .final {
+        text-align: center;
+        padding: 75px 30px 90px;
+        background: var(--marrom);
+        color: white;
+      }
+      .final .detalhe {
+        margin: 0 auto 30px;
+        background: var(--dourado-claro);
+      }
+      .final h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.3rem;
+        font-weight: 500;
+        max-width: 600px;
+        margin: auto;
+        line-height: 1.3;
+      }
+      .final p {
+        margin-top: 25px;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.75;
+      }
+      @media (max-width: 650px) {
+        .convite {
+          margin: 0;
+        }
+        .hero {
+          min-height: 720px;
+          padding: 45px 25px;
+          align-items: flex-start;
+        }
+        .hero-imagem {
+          width: 100%;
+          height: 100%;
+          opacity: 0.3;
+        }
+        .hero-imagem:after {
+          background: linear-gradient(
+            180deg,
+            rgba(255, 253, 248, 0.85) 0%,
+            rgba(255, 253, 248, 0.35) 40%,
+            rgba(255, 253, 248, 0.85) 100%
+          );
+        }
+        .hero-conteudo {
+          width: 100%;
+          padding-top: 30px;
+          text-align: center;
+        }
+        .hero-conteudo .detalhe {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .frase {
+          font-size: 2.5rem;
+        }
+        .subfrase {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .nome {
+          font-size: 3rem;
+        }
+        .conteudo {
+          padding: 50px 22px;
+        }
+        .info-box {
+          padding: 25px 20px;
+        }
+        .info {
+          grid-template-columns: 1fr;
+          gap: 4px;
+          margin-bottom: 18px;
+        }
+        .info strong {
+          margin-top: 8px;
+        }
+        .destaques {
+          grid-template-columns: 1fr;
+        }
+        .presentes {
+          padding: 28px 20px;
+        }
+        .botoes {
+          flex-direction: column;
+        }
+        .botao {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="convite">
+      <section class="hero">
+        <div class="hero-imagem">
+          <img src="art.jpeg" alt="Princesa Bela em dourado" />
+        </div>
+        <div class="hero-conteudo">
+          <div class="detalhe"></div>
+          <p class="frase">
+            “Os sonhos que um dia imaginei agora se tornam memórias
+            inesquecíveis”
+          </p>
+          <p class="subfrase">
+            A Princesa Bela tem a honra de convidá-lo para uma celebração muito
+            especial.
+          </p>
+          <h1 class="nome">Izabela Souza Santos</h1>
+          <p class="idade">15 anos</p>
+        </div>
+      </section>
+
+      <section class="conteudo">
+        <h2 class="titulo-secao">Uma tarde especial</h2>
+        <p class="entrada">
+          Venha celebrar comigo este momento mágico, cercado de pessoas
+          especiais, alegria e muitos sonhos.
+        </p>
+
+        <h2 class="titulo-secao">Detalhes da celebração</h2>
+        <div class="info-box">
+          <div class="info">
+            <strong>Nome</strong><span>Izabela Souza Santos</span>
+            <strong>Idade</strong><span>15 anos</span> <strong>Data</strong
+            ><span>25 de outubro — domingo</span> <strong>Horário</strong
+            ><span>14h às 21h</span> <strong>Local</strong
+            ><span class="endereco"
+              >Rua P14, Quadra 14, Lote 24<br />Recanto das Oliveiras II<br />Senador
+              Canedo — GO<br />CEP 75250-000</span
+            >
+            <strong>Tema</strong><span>Bela e a Fera</span>
+            <strong>Atrações</strong
+            ><span>Piscina, vôlei, pula-pula, balanço e escorregador.</span>
+            <strong>Crianças</strong
+            ><span
+              >Pula-pula, balanço e escorregador para menores de 8 anos.</span
+            >
+            <strong>Aviso</strong
+            ><span>Levar roupa reserva por causa da piscina.</span>
+            <strong>Confirmação</strong><span>WhatsApp: (62) 99373-6651</span>
+          </div>
+          <div class="botoes">
+            <a
+              class="botao"
+              href="https://www.google.com/maps?q=-16.6616334%2C-49.1496554&z=17&hl=pt-BR"
+              target="_blank"
+              >📍 Ver localização</a
+            >
+            <a class="botao" href="https://wa.me/5562993736651" target="_blank"
+              >💬 Confirmar presença</a
+            >
+          </div>
+        </div>
+
+        <h2 class="titulo-secao" style="margin-top: 65px">
+          Momentos para aproveitar
+        </h2>
+        <div class="destaques">
+          <div class="card">
+            <h3>☀ Piscina</h3>
+            <p>Um espaço para aproveitar a tarde e se divertir.</p>
+          </div>
+          <div class="card">
+            <h3>🏐 Vôlei</h3>
+            <p>Diversão e brincadeiras para todos.</p>
+          </div>
+          <div class="card">
+            <h3>✨ Espaço Kids</h3>
+            <p>Pula-pula, balanço e escorregador para menores de 8 anos.</p>
+          </div>
+          <div class="card">
+            <h3>👗 Roupa reserva</h3>
+            <p>Não esqueça de levar uma roupa extra por causa da piscina.</p>
+          </div>
+        </div>
+
+        <section class="presentes">
+          <h2 class="titulo-secao">🎁 Lista de Presentes</h2>
+          <ul class="presentes-lista">
+            <li><strong>Roupas:</strong> blusa M | calça/short 38</li>
+            <li><strong>Calçados:</strong> tamanho 37</li>
+            <li><strong>Acessórios:</strong> prata ou dourado</li>
+            <li><strong>Perfumes:</strong> doces ou marcantes</li>
+            <li><strong>Maquiagem:</strong> maquiagem ou gloss</li>
+            <li>
+              <strong>Decoração:</strong> itens fofinhos que tenham a ver com a
+              aniversariante
+            </li>
+            <li><strong>Flamengo:</strong> itens do Flamengo</li>
+          </ul>
+          <div class="pix">
+            <strong>💛 Presente via Pix</strong>
+            <p>Caso prefira contribuir de forma prática:</p>
+            <p class="pix-chave">Chave Pix: (62) 99373-6651</p>
+            <p>Nubank — Izabela Souza Santos</p>
+            <div class="botoes">
+              <a class="botao" href="tel:+5562993736651">Usar chave Pix</a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <footer class="final">
+        <div class="detalhe"></div>
+        <h2>
+          “Esperamos você para brindar essa nova fase com muito amor e boas
+          energias.”
+        </h2>
+        <p>Sua presença tornará este momento ainda mais especial.</p>
+      </footer>
+    </main>
+  </body>
+</html>
