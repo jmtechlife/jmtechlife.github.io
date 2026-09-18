@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#211d18">
+<title>Izabela Souza Santos • 15 Anos</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root{
+  --ivory:#f8f4ec;
+  --paper:#fffdf8;
+  --ink:#29251f;
+  --soft:#756d61;
+  --gold:#b28a45;
+  --gold2:#d6b77b;
+  --wine:#672f2a;
+  --line:rgba(178,138,69,.28);
+  --shadow:0 30px 80px rgba(43,34,24,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 10% 10%,rgba(214,183,123,.18),transparent 25%),
+    radial-gradient(circle at 90% 80%,rgba(103,47,42,.07),transparent 25%),
+    var(--ivory);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  font-weight:400;
+}
+body:before{
+  content:"";
+  position:fixed;inset:14px;
+  border:1px solid rgba(178,138,69,.18);
+  pointer-events:none;z-index:20;
+}
+.invite{
+  width:min(920px,calc(100% - 36px));
+  margin:38px auto;
+  background:var(--paper);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero{
+  min-height:760px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  padding:80px 70px;
+  background:linear-gradient(115deg,#fffdf8 0%,#f8f2e7 58%,#eee3d0 100%);
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;border:1px solid var(--line);
+  width:360px;height:360px;border-radius:50%;
+  pointer-events:none;
+}
+.hero:before{left:-250px;top:-180px}
+.hero:after{right:-270px;bottom:-220px}
+.hero-image{
+  position:absolute;right:0;top:0;width:51%;height:100%;
+  overflow:hidden;
+}
+.hero-image img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  display:block;
+  filter:saturate(.9) contrast(.98);
+}
+.hero-image:after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,var(--paper) 0%,rgba(255,253,248,.88) 15%,rgba(255,253,248,.18) 54%,rgba(255,253,248,0) 100%),
+    linear-gradient(0deg,rgba(255,253,248,.2),transparent 40%,rgba(255,253,248,.12));
+}
+.hero-content{position:relative;z-index:2;width:64%;max-width:600px}
+.kicker{
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:24px;
+}
+.rule{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.rule span{width:52px;height:1px;background:var(--gold)}
+.rule i{width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);display:block}
+.quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,6vw,4.65rem);
+  line-height:.98;font-weight:500;letter-spacing:-.025em;
+  max-width:580px;
+}
+.quote em{font-style:normal;color:var(--gold)}
+.invite-line{
+  margin-top:32px;max-width:470px;color:var(--soft);
+  font-family:'Cormorant Garamond',serif;font-size:1.45rem;line-height:1.35;
+}
+.name{
+  margin-top:40px;font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.4rem,5vw,4rem);font-weight:600;line-height:1;
+}
+.age{
+  margin-top:10px;color:var(--gold);font-size:11px;
+  letter-spacing:.4em;text-transform:uppercase;
+}
+.monogram{
+  margin-top:42px;width:58px;height:58px;border:1px solid var(--gold);
+  border-radius:50%;display:grid;place-items:center;
+  font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);
+  background:rgba(255,253,248,.62);
+}
+.section{padding:76px clamp(28px,8vw,82px)}
+.section-head{display:flex;align-items:end;gap:18px;margin-bottom:35px}
+.section-head .num{font-size:10px;letter-spacing:.2em;color:var(--gold)}
+.section-head h2{
+  font-family:'Cormorant Garamond',serif;font-size:2.25rem;font-weight:600;
+}
+.section-head:after{content:"";height:1px;background:var(--line);flex:1;margin-bottom:9px}
+.intro{
+  max-width:690px;margin:0 auto 64px;text-align:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.65rem;line-height:1.45;
+}
+.details{
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,#fffdf8,#f8f1e5);
+  padding:38px;
+  position:relative;
+}
+.details:before{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(178,138,69,.14);
+  pointer-events:none;
+}
+.detail-grid{position:relative;display:grid;grid-template-columns:150px 1fr;gap:0}
+.detail-row{display:contents}
+.detail-grid dt,.detail-grid dd{padding:17px 0;border-bottom:1px solid rgba(178,138,69,.14)}
+.detail-grid dt{
+  font-size:10px;text-transform:uppercase;letter-spacing:.18em;
+  color:var(--gold);font-weight:600;
+}
+.detail-grid dd{font-size:14px;line-height:1.55}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;position:relative}
+.btn{
+  text-decoration:none;padding:14px 21px;border:1px solid var(--gold);
+  color:var(--ink);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  transition:.25s;background:rgba(255,253,248,.75);
+}
+.btn:hover{background:var(--gold);color:white;transform:translateY(-2px)}
+.experience{
+  margin-top:72px;display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);border:1px solid var(--line);
+}
+.experience article{background:var(--paper);padding:32px}
+.icon{font-size:19px;color:var(--gold);margin-bottom:18px}
+.experience h3{
+  font-family:'Cormorant Garamond',serif;font-size:1.55rem;margin-bottom:8px;
+}
+.experience p{font-size:13px;color:var(--soft);line-height:1.65}
+.gifts{
+  margin-top:72px;padding:42px;
+  background:#211d18;color:#f8f4ec;position:relative;overflow:hidden;
+}
+.gifts:after{
+  content:"";position:absolute;right:-100px;top:-100px;width:280px;height:280px;
+  border:1px solid rgba(214,183,123,.25);border-radius:50%;
+}
+.gifts .section-head h2{color:#f8f4ec}
+.gifts .section-head:after{background:rgba(214,183,123,.25)}
+.gifts .section-head .num{color:var(--gold2)}
+.gift-list{list-style:none;display:grid;gap:0;position:relative;z-index:1}
+.gift-list li{
+  padding:15px 0;border-bottom:1px solid rgba(214,183,123,.16);
+  font-size:13px;color:#e8dfd1;
+}
+.gift-list strong{color:var(--gold2);font-weight:500}
+.pix{
+  margin-top:28px;padding:22px;border:1px solid rgba(214,183,123,.3);
+  background:rgba(255,255,255,.035);position:relative;z-index:1;
+}
+.pix-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2)}
+.pix-key{font-family:'DM Sans',sans-serif;margin-top:8px;font-size:16px;letter-spacing:.04em}
+.pix-name{margin-top:4px;font-size:12px;color:#bfb5a6}
+.closing{
+  padding:90px 30px 105px;text-align:center;
+  background:linear-gradient(180deg,#f7f0e3,#fffdf8);
+}
+.closing .ornament{
+  color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:25px;
+  margin-bottom:24px;
+}
+.closing h2{
+  max-width:650px;margin:auto;font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3.1rem);font-weight:500;line-height:1.15;
+}
+.closing p{
+  margin-top:25px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--soft);
+}
+.footer-mark{
+  margin-top:35px;color:var(--gold);font-family:'Cormorant Garamond',serif;
+  font-size:15px;letter-spacing:.2em;
+}
+@media(max-width:680px){
+  body:before{inset:8px}
+  .invite{width:100%;margin:0}
+  .hero{min-height:760px;padding:52px 26px;align-items:flex-start}
+  .hero-image{width:100%;height:100%;opacity:.30}
+  .hero-image:after{
+    background:linear-gradient(180deg,rgba(255,253,248,.84),rgba(255,253,248,.25) 42%,rgba(255,253,248,.88));
+  }
+  .hero-content{width:100%;text-align:center;padding-top:25px}
+  .rule{justify-content:center}
+  .quote{font-size:3rem}
+  .invite-line{margin-left:auto;margin-right:auto;font-size:1.35rem}
+  .name{font-size:3rem}
+  .monogram{margin:36px auto 0}
+  .section{padding:58px 22px}
+  .section-head h2{font-size:2rem}
+  .intro{font-size:1.45rem;margin-bottom:45px}
+  .details{padding:27px 22px}
+  .detail-grid{grid-template-columns:1fr}
+  .detail-grid dt{padding-bottom:4px;border-bottom:0}
+  .detail-grid dd{padding-top:0;padding-bottom:16px}
+  .experience{grid-template-columns:1fr}
+  .gifts{padding:30px 22px}
+  .actions{flex-direction:column}
+  .btn{text-align:center;width:100%}
+}
+</style>
+</head>
+
+<body>
+<main class="invite">
+
+<section class="hero">
+  <div class="hero-image">
+    <img src="art.jpeg" alt="Princesa Bela em dourado">
+  </div>
+  <div class="hero-content">
+    <div class="kicker">Uma celebração especial</div>
+    <div class="rule"><span></span><i></i></div>
+    <p class="quote">Os sonhos que um dia imaginei agora se tornam <em>memórias inesquecíveis.</em></p>
+    <p class="invite-line">A Princesa Bela tem a honra de convidá-lo para uma celebração muito especial.</p>
+    <h1 class="name">Izabela Souza Santos</h1>
+    <p class="age">15 anos</p>
+    <div class="monogram">I</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><span class="num">01</span><h2>O grande dia</h2></div>
+  <p class="intro">Uma tarde preparada com carinho para celebrar uma nova fase, reunir pessoas especiais e criar lembranças que ficarão para sempre.</p>
+
+  <div class="details">
+    <dl class="detail-grid">
+      <dt>Data</dt><dd>25 de outubro — domingo</dd>
+      <dt>Horário</dt><dd>14h às 21h</dd>
+      <dt>Local</dt><dd>Rua P14, Quadra 14, Lote 24 — Recanto das Oliveiras II<br>Senador Canedo — GO · CEP 75250-000</dd>
+      <dt>Tema</dt><dd>Bela e a Fera</dd>
+      <dt>Atrações</dt><dd>Piscina, vôlei, pula-pula, balanço e escorregador</dd>
+      <dt>Crianças</dt><dd>Pula-pula, balanço e escorregador para menores de 8 anos</dd>
+      <dt>Importante</dt><dd>Levar roupa reserva por causa da piscina</dd>
+      <dt>Confirmação</dt><dd>(62) 99373-6651</dd>
+    </dl>
+
+    <div class="actions">
+      <a class="btn" target="_blank" href="https://www.google.com/maps?q=-16.6616334%2C-49.1496554&z=17&hl=pt-BR">⌖ Localização</a>
+      <a class="btn" target="_blank" href="https://wa.me/5562993736651?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Izabela.">Confirmar presença</a>
+    </div>
+  </div>
+
+  <div class="section-head" style="margin-top:72px"><span class="num">02</span><h2>Para aproveitar</h2></div>
+  <div class="experience">
+    <article><div class="icon">✦</div><h3>Piscina</h3><p>Um espaço para aproveitar a tarde, refrescar-se e curtir bons momentos.</p></article>
+    <article><div class="icon">◇</div><h3>Vôlei</h3><p>Diversão e brincadeiras para compartilhar com família e amigos.</p></article>
+    <article><div class="icon">✧</div><h3>Espaço Kids</h3><p>Pula-pula, balanço e escorregador especialmente para menores de 8 anos.</p></article>
+    <article><div class="icon">⌁</div><h3>Roupa reserva</h3><p>Para aproveitar a piscina com tranquilidade, lembre-se de levar uma roupa extra.</p></article>
+  </div>
+
+  <section class="gifts">
+    <div class="section-head"><span class="num">03</span><h2>Presentes</h2></div>
+    <ul class="gift-list">
+      <li><strong>Roupas</strong> — blusa M · calça/short 38</li>
+      <li><strong>Calçados</strong> — tamanho 37</li>
+      <li><strong>Acessórios</strong> — prata ou dourado</li>
+      <li><strong>Perfumes</strong> — doces ou marcantes</li>
+      <li><strong>Maquiagem</strong> — maquiagem ou gloss</li>
+      <li><strong>Decoração</strong> — itens fofinhos que tenham a ver com a aniversariante</li>
+      <li><strong>Flamengo / Seleção</strong> — itens relacionados</li>
+    </ul>
+    <div class="pix">
+      <div class="pix-label">Presente via Pix</div>
+      <div class="pix-key">(62) 99373-6651</div>
+      <div class="pix-name">Nubank · Izabela Souza Santos</div>
+    </div>
+  </section>
+</section>
+
+<footer class="closing">
+  <div class="ornament">✦ · ✦</div>
+  <h2>Esperamos você para brindar essa nova fase com muito amor e boas energias.</h2>
+  <p>Sua presença tornará este momento ainda mais especial.</p>
+  <div class="footer-mark">IZABELA · 15 ANOS</div>
+</footer>
+
+</main>
+</body>
+</html>
