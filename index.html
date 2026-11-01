@@ -1,88 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convite Izabela — Escolha uma versão</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap");
-
-      :root {
-        --fundo: #f5f0e8;
-        --texto: #4d4035;
-        --dourado: #b58a3a;
-        --dourado-claro: #d8bb7a;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-        background: radial-gradient(circle at top, #fffdf8, var(--fundo));
-        color: var(--texto);
-        font-family: Montserrat, sans-serif;
-      }
-
-      main {
-        max-width: 560px;
-        text-align: center;
-      }
-
-      h1 {
-        margin: 0 0 12px;
-        font:
-          600 clamp(2.4rem, 7vw, 4rem) "Cormorant Garamond",
-          serif;
-      }
-
-      p {
-        margin: 0 0 32px;
-      }
-
-      .botoes {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-      }
-
-      a {
-        min-width: 210px;
-        padding: 14px 20px;
-        border: 1px solid var(--dourado);
-        color: var(--texto);
-        text-decoration: none;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        transition: 0.2s ease;
-      }
-
-      a:hover,
-      a:focus-visible {
-        background: var(--dourado);
-        color: white;
-        outline: none;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>15 anos da Izabela</h1>
-      <p>Escolha uma versão do convite para visualizar.</p>
-      <nav class="botoes" aria-label="Versões do convite">
-        <a href="classico/index.html"
-          >Convite clássico</a
-        >
-        <a href="premium/index.html">Convite premium</a>
-      </nav>
-    </main>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d1b">
+<title>Homem-Aranha | Desafio da Matemática</title>
+<style>
+:root{color-scheme:dark;--bg:#080d1b;--panel:#101a2d;--red:#d92742;--blue:#244e91;--muted:#aab7d4;--border:#263b5e;--green:#59e0b1}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at top right,#15294a 0,transparent 35%),var(--bg);color:#f4f6ff;font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+button,input{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:12px 14px;font-weight:700;transition:transform .12s,filter .12s}button:active{transform:scale(.98)}button:focus-visible,input:focus-visible{outline:3px solid #7cb4ff;outline-offset:2px}
+.app{max-width:850px;margin:auto;padding:16px;display:flex;flex-direction:column;gap:14px}
+.hero{background:radial-gradient(circle at 80% 10%,#244e91,transparent 42%),linear-gradient(135deg,#690b19,#101c3b 70%);border:1px solid #d52a42;border-radius:18px;padding:22px;position:relative;overflow:hidden}
+.hero:after{content:"🕸️";position:absolute;right:14px;top:12px;font-size:76px;opacity:.23;pointer-events:none}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:800;color:#ffc2cb}.hero h1{font-size:clamp(25px,5vw,40px);line-height:1.08;margin:10px 0}.hero p,.muted{color:var(--muted);line-height:1.5}.stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:14px}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.nav button{background:#14213a;color:#cbd8f3;padding:11px 5px;font-size:13px}.nav button.active{background:#bd2038;color:white}
+main{display:flex;flex-direction:column;gap:13px}.panel,.tile{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:16px}.panel h2,.panel h3{margin:0 0 8px}.panel h3{font-size:19px}.primary{background:var(--red);color:white}.secondary{background:#142b50;border:1px solid #31588d;color:white}.full{width:100%;margin-top:12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tile{text-align:left;color:white}.tile .emoji{font-size:27px;display:block;margin-bottom:8px}.tile small{display:block;color:var(--muted);margin-top:5px}.tag{font-size:11px;color:#ff9aa9;background:#451b2b;padding:5px 9px;border-radius:20px;display:inline-block;font-weight:800}.progress{height:8px;background:#26344e;border-radius:9px;overflow:hidden;margin:10px 0}.progress>div{height:100%;background:linear-gradient(90deg,#e52c48,#438bea);transition:width .2s}.option{display:block;width:100%;text-align:left;background:#172743;border:1px solid #304b73;color:white;margin-top:8px}.option.correct{background:#14513f;border-color:#36c995}.option.wrong{background:#642537;border-color:#ff6478}.option:disabled{cursor:default}.feedback{margin-top:14px;line-height:1.5}.good{color:var(--green)}.bad{color:#ff8291}
+svg{width:100%;height:auto;background:#f4f6ff;border-radius:11px;touch-action:manipulation}.chart-help{text-align:center;font-size:12px;color:var(--muted)}input{width:100%;padding:12px;border-radius:10px;border:1px solid #526482;background:#f8fafc;color:#111;margin-top:7px}.rankrow{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #26344e}.rankrow:last-child{border-bottom:0}
+footer{text-align:center;color:#7f90b2;font-size:12px;padding:8px}
+@media(min-width:650px){.app{padding:24px}.hero{padding:28px}.panel{padding:20px}.nav button{font-size:14px}}
+@media(max-width:390px){.nav button{font-size:11px}.app{padding:10px}.hero{padding:17px}.grid{gap:7px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+<div class="eyebrow">🕷️ MISSÃO MATEMÁTICA</div>
+<h1>Homem-Aranha<br>Desafio da Matemática</h1>
+<p>Grandes poderes exigem grandes conhecimentos!</p>
+<div class="stats"><span>⭐ <b id="totalPts">0</b> pontos</span><span>🕸️ <b id="doneCount">0</b>/50 questões respondidas</span></div>
+</header>
+<nav class="nav" aria-label="Menu principal">
+<button class="active" data-page="home">🏠 Início</button><button data-page="lessons">📚 Aulas</button><button data-page="quiz">🎯 Desafio</button><button data-page="rank">🏆 Ranking</button>
+</nav>
+<main id="screen" aria-live="polite"></main>
+<footer>Projeto educativo inspirado no universo dos super-heróis.</footer>
+</div>
+<script>
+const topics=[
+{title:'Função do 2º grau',emoji:'📈',intro:'É uma função escrita na forma f(x) = ax² + bx + c, com a diferente de zero. Seu gráfico é uma parábola.',questions:[
+['Qual é a forma geral da função do 2º grau?',['ax+b','ax²+bx+c','a/x','x³+a'],'ax²+bx+c','A função quadrática tem a forma f(x)=ax²+bx+c, com a ≠ 0.'],
+['Qual é o nome do gráfico de uma função do 2º grau?',['Reta','Circunferência','Parábola','Triângulo'],'Parábola','O gráfico da função quadrática é uma parábola.'],
+['Se a > 0, a parábola tem concavidade:',['Para cima','Para baixo','Para a direita','Não tem'],'Para cima','Quando a é positivo, a parábola fica voltada para cima.'],
+['Se a < 0, a parábola tem concavidade:',['Para cima','Para baixo','Para a esquerda','Horizontal'],'Para baixo','Quando a é negativo, a parábola fica voltada para baixo.'],
+['Na função f(x)=2x²+3x−1, o valor de a é:',['3','−1','2','−2'],'2','O coeficiente de x² é o valor de a.'],
+['Na função f(x)=x²−5x+6, o valor de c é:',['1','−5','6','−6'],'6','O termo independente é c.'],
+['Uma função do 2º grau pode ter quantas raízes reais?',['Somente uma','Nenhuma, uma ou duas','Sempre três','Sempre duas'],'Nenhuma, uma ou duas','Isso depende do discriminante Δ.'],
+['O eixo de simetria da parábola passa pelo:',['Vértice','Eixo y sempre','Zero','Ponto qualquer'],'Vértice','O eixo de simetria passa pelo vértice da parábola.'],
+['Se f(x)=x², então f(2) vale:',['2','4','6','8'],'4','Substituindo: 2²=4.'],
+['Na função f(x)=−x², a parábola é voltada:',['Para cima','Para baixo','Para a direita','Para a esquerda'],'Para baixo','O coeficiente a é negativo.']]},
+{title:'Razão e proporção',emoji:'⚖️',intro:'Razão é uma comparação entre duas grandezas por divisão. Proporção é a igualdade entre duas razões.',questions:[
+['A razão entre 2 e 6 é:',['2/6','6/2','2+6','6−2'],'2/6','A razão é o primeiro número dividido pelo segundo.'],
+['Qual igualdade representa uma proporção?',['2/3=4/6','2/3=3/4','1/2=2/3','3/5=2/5'],'2/3=4/6','As duas razões são equivalentes.'],
+['Se 2 cadernos custam R$ 10, quanto custam 4?',['R$ 10','R$ 15','R$ 20','R$ 25'],'R$ 20','Cada caderno custa R$ 5; quatro custam R$ 20.'],
+['Em 3/5 = x/10, quanto vale x?',['3','5','6','10'],'6','Multiplicando cruzado: 5x=30, então x=6.'],
+['Uma receita usa 2 copos para 4 pessoas. Para 8 pessoas, serão:',['2 copos','3 copos','4 copos','8 copos'],'4 copos','O número de pessoas dobrou, então a quantidade também.'],
+['A razão 4:8 simplificada é:',['1:2','2:1','4:4','1:4'],'1:2','Dividimos os dois termos por 4.'],
+['Se 5 lápis custam R$ 15, 1 lápis custa:',['R$ 2','R$ 3','R$ 5','R$ 10'],'R$ 3','15 dividido por 5 é 3.'],
+['Se 3/4=x/8, x é:',['4','5','6','8'],'6','4x=24, portanto x=6.'],
+['Uma escala 1:100 significa que 1 cm representa:',['1 cm','10 cm','100 cm','1000 cm'],'100 cm','Cada centímetro no desenho representa 100 cm reais.'],
+['Grandezas diretamente proporcionais variam:',['Em sentidos opostos','Na mesma proporção','Sem relação','Sempre diminuindo'],'Na mesma proporção','Quando uma dobra, a outra também dobra.']]},
+{title:'Fórmula de Bhaskara',emoji:'🧮',intro:'A fórmula de Bhaskara resolve equações do 2º grau: x = (−b ± √Δ)/(2a), em que Δ=b²−4ac.',questions:[
+['Qual é a fórmula do discriminante?',['b²+4ac','b²−4ac','−b/2a','a²−4bc'],'b²−4ac','O discriminante é Δ=b²−4ac.'],
+['Na equação x²−5x+6=0, quanto vale a?',['1','−5','6','0'],'1','O coeficiente de x² é 1.'],
+['Na equação x²−5x+6=0, quanto vale b?',['1','−5','6','5'],'−5','O coeficiente de x é −5.'],
+['Na equação x²−5x+6=0, quanto vale c?',['1','−5','6','0'],'6','O termo independente é 6.'],
+['Se Δ é positivo, a equação tem:',['Duas raízes reais diferentes','Nenhuma raiz real','Uma raiz real dupla','Sempre infinitas raízes'],'Duas raízes reais diferentes','Δ positivo indica duas raízes reais distintas.'],
+['Se Δ=0, a equação tem:',['Duas raízes diferentes','Uma raiz real dupla','Nenhuma raiz','Três raízes'],'Uma raiz real dupla','As duas soluções são iguais.'],
+['Se Δ é negativo, a equação tem:',['Duas raízes reais','Uma raiz real','Nenhuma raiz real','Quatro raízes'],'Nenhuma raiz real','Não existe raiz quadrada real de número negativo.'],
+['Qual é o Δ de x²−4x+3=0?',['2','4','8','16'],'4','Δ=(−4)²−4·1·3=16−12=4.'],
+['As raízes de x²−5x+6=0 são:',['1 e 6','2 e 3','−2 e −3','1 e 5'],'2 e 3','A equação pode ser fatorada em (x−2)(x−3)=0.'],
+['Na fórmula de Bhaskara, o denominador é:',['a','2a','−b','Δ'],'2a','O denominador da fórmula é 2a.']]},
+{title:'Média, moda e mediana',emoji:'📊',intro:'Média: soma dos valores dividida pela quantidade. Moda: valor que mais aparece. Mediana: valor central após ordenar os dados.',questions:[
+['A média de 2, 4 e 6 é:',['3','4','5','6'],'4','(2+4+6)÷3=4.'],
+['A moda de 1, 2, 2, 3, 4 é:',['1','2','3','4'],'2','O número 2 aparece mais vezes.'],
+['A mediana de 1, 3, 5 é:',['1','3','5','9'],'3','O valor central é 3.'],
+['A média de 5 e 9 é:',['6','7','8','9'],'7','(5+9)÷2=7.'],
+['A mediana de 2, 4, 6, 8 é:',['4','5','6','7'],'5','A mediana é a média dos dois valores centrais: (4+6)÷2=5.'],
+['Qual medida representa o valor que mais se repete?',['Média','Moda','Mediana','Amplitude'],'Moda','A moda é o valor de maior frequência.'],
+['Qual é a média de 3, 3, 6 e 8?',['4','5','6','8'],'5','(3+3+6+8)÷4=5.'],
+['A mediana de 4, 1, 7, após ordenar, é:',['1','4','7','7,5'],'4','Ordenando: 1, 4, 7. O valor central é 4.'],
+['Os valores 2, 2, 3, 5, 5 têm:',['Uma moda: 3','Duas modas: 2 e 5','Moda 2 apenas','Nenhuma moda'],'Duas modas: 2 e 5','Os valores 2 e 5 aparecem duas vezes cada.'],
+['A média de 10, 20, 30 e 40 é:',['20','25','30','35'],'25','(10+20+30+40)÷4=25.']]},
+{title:'Ponto de máximo e mínimo',emoji:'🎯',intro:'O vértice é o ponto mais alto ou mais baixo da parábola. Se a>0, há ponto de mínimo; se a<0, há ponto de máximo.',questions:[
+['Quando a parábola é voltada para cima, o vértice é ponto de:',['Máximo','Mínimo','Origem sempre','Raiz'],'Mínimo','A parábola voltada para cima tem seu ponto mais baixo no vértice.'],
+['Quando a parábola é voltada para baixo, o vértice é ponto de:',['Mínimo','Máximo','Origem','Raiz'],'Máximo','A parábola voltada para baixo tem seu ponto mais alto no vértice.'],
+['O vértice é representado por:',['(a,b)','(xᵥ,yᵥ)','(x,y,z)','(b,c)'],'(xᵥ,yᵥ)','O vértice possui coordenadas xv e yv.'],
+['Se a=3, a parábola tem ponto de:',['Máximo','Mínimo','Nenhum','Infinito'],'Mínimo','Como a é positivo, a concavidade é para cima.'],
+['Se a=−2, a parábola tem ponto de:',['Mínimo','Máximo','Nenhum','Duas origens'],'Máximo','Como a é negativo, a concavidade é para baixo.']]},
+];
+const graphQs=[{kind:'mínimo',x:2,y:-1,ex:'O ponto mais baixo da parábola é (2, −1).'},{kind:'máximo',x:-2,y:3,ex:'O ponto mais alto da parábola é (−2, 3).'},{kind:'mínimo',x:-1,y:-3,ex:'O ponto mais baixo da parábola é (−1, −3).'},{kind:'máximo',x:3,y:4,ex:'O ponto mais alto da parábola é (3, 4).'},{kind:'mínimo',x:0,y:2,ex:'O ponto mais baixo da parábola é (0, 2).'}];
+let page='home',topicIndex=0,qIndex=0,score=0,answered=0,locked=false,graphMode=false,graphQ=0,graphLocked=false;
+const $=s=>document.querySelector(s),screen=$('#screen');
+function update(){$('#totalPts').textContent=score;$('#doneCount').textContent=answered}
+function show(){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));update();
+if(page==='home')screen.innerHTML=`<section class="panel"><span class="tag">CENTRO DE TREINAMENTO</span><h2 style="margin-top:12px">Olá, herói! 🕷️</h2><p class="muted">Escolha uma missão, estude os conteúdos e teste seus conhecimentos para salvar a cidade da matemática!</p><div class="grid" style="margin-top:15px"><div class="tile">⭐<h3>${score}</h3><small>Pontos conquistados</small></div><div class="tile">🕸️<h3>${answered}/50</h3><small>Questões respondidas</small></div></div><button class="primary full" id="start">Começar desafio 🕷️</button></section><h2>Suas missões</h2><div class="grid">${topics.map((t,i)=>`<button class="tile" data-topic="${i}"><span class="emoji">${t.emoji}</span><b>${t.title}</b><small>10 questões</small></button>`).join('')}</div>`;
+else if(page==='lessons')screen.innerHTML=`<h2>📚 Central de treinamento</h2>${topics.map((t,i)=>`<section class="panel"><h3>${t.emoji} ${t.title}</h3><p class="muted">${t.intro}</p><button class="secondary full" data-topic="${i}">Treinar este conteúdo</button></section>`).join('')}<section class="panel"><h3>🕸️ Gráficos: máximo e mínimo</h3><p class="muted">Observe o plano cartesiano e clique nas coordenadas do vértice.</p><button class="primary full" id="graphStart">Praticar gráficos</button></section>`;
+else if(page==='quiz')graphMode?graphPage():quizPage();else rankPage()}
+function quizPage(){const t=topics[topicIndex],q=t.questions[qIndex];screen.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><span class="tag">${t.emoji} ${t.title}</span><b>${qIndex+1}/10</b></div><div class="progress"><div style="width:${(qIndex+1)*10}%"></div></div><section class="panel"><p class="muted">MISSÃO ${topicIndex+1} · QUESTÃO ${qIndex+1}</p><h3 style="margin-top:12px">${q[0]}</h3><div>${q[1].map((o,i)=>`<button class="option" data-answer="${i}">${String.fromCharCode(65+i)}) ${o}</button>`).join('')}</div><div id="result" class="feedback"></div><button id="next" class="primary full" hidden>Próxima questão →</button></section><button class="secondary" id="back">← Voltar às aulas</button>`}
+function answer(i){if(locked)return;locked=true;const q=topics[topicIndex].questions[qIndex],correct=q[2]===q[1][i];if(correct)score+=10;answered++;document.querySelectorAll('[data-answer]').forEach((b,j)=>{if(q[1][j]===q[2])b.classList.add('correct');else if(j===i)b.classList.add('wrong');b.disabled=true});$('#result').innerHTML=`<b class="${correct?'good':'bad'}">${correct?'Mandou bem! +10 pontos':'Quase! Continue treinando.'}</b><p class="muted">${q[3]}</p>`;$('#next').hidden=false;update()}
+function next(){qIndex++;locked=false;if(qIndex>=10){screen.innerHTML=`<section class="panel" style="text-align:center"><div style="font-size:42px">🕷️</div><h2>Missão concluída!</h2><p class="muted">Você terminou ${topics[topicIndex].title}.</p><button class="primary full" id="backHome">Voltar ao início</button></section>`;return}quizPage()}
+function graphPage(){const g=graphQs[graphQ];screen.innerHTML=`<div style="display:flex;justify-content:space-between"><span class="tag">🎯 PONTO DE ${g.kind.toUpperCase()}</span><b>${graphQ+1}/5</b></div><div class="progress"><div style="width:${(graphQ+1)*20}%"></div></div><section class="panel"><h3>Marque no gráfico o ponto de ${g.kind} da parábola.</h3><p class="muted">Toque no ponto que você acredita ser o vértice.</p><svg id="plane" viewBox="0 0 300 300" role="img" aria-label="Plano cartesiano interativo"></svg><p class="chart-help">Eixo X: horizontal · Eixo Y: vertical</p><div id="gresult" class="feedback"></div><button class="primary full" id="gnext" hidden>Próximo gráfico →</button></section><button class="secondary" id="gback">← Voltar às aulas</button>`;drawGraph()}
+function drawGraph(){const svg=$('#plane'),ns='http://www.w3.org/2000/svg',make=(tag,attrs)=>{const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));svg.appendChild(e);return e};for(let n=-5;n<=5;n++){const x=150+n*24,y=150-n*24;make('line',{x1:x,y1:24,x2:x,y2:276,stroke:'#d4d9e8','stroke-width':.7});make('line',{x1:24,y1:y,x2:276,y2:y,stroke:'#d4d9e8','stroke-width':.7});if(n!==0){let tx=make('text',{x,y:165,'font-size':9,'text-anchor':'middle',fill:'#24324c'});tx.textContent=n;let ty=make('text',{x:137,y:y+3,'font-size':9,'text-anchor':'end',fill:'#24324c'});ty.textContent=n}}make('line',{x1:24,y1:150,x2:280,y2:150,stroke:'#172b4d','stroke-width':2});make('line',{x1:150,y1:276,x2:150,y2:24,stroke:'#172b4d','stroke-width':2});let xl=make('text',{x:282,y:143,'font-size':11,fill:'#172b4d'});xl.textContent='X';let yl=make('text',{x:158,y:20,'font-size':11,fill:'#172b4d'});yl.textContent='Y';for(let x=-5;x<=5;x++)for(let y=-5;y<=5;y++){const c=make('circle',{cx:150+x*24,cy:150-y*24,r:5,fill:'#416da7',opacity:.3,'data-x':x,'data-y':y});c.style.cursor='pointer';c.setAttribute('aria-label',`Coordenada ${x}, ${y}`);c.addEventListener('click',()=>graphAnswer(x,y))}}
+function graphAnswer(x,y){if(graphLocked)return;graphLocked=true;const g=graphQs[graphQ],ok=x===g.x&&y===g.y;if(ok)score+=10;answered++;const svg=$('#plane'),dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',150+x*24);dot.setAttribute('cy',150-y*24);dot.setAttribute('r',8);dot.setAttribute('fill',ok?'#0b9b69':'#d92742');dot.setAttribute('stroke','#fff');dot.setAttribute('stroke-width',2);svg.appendChild(dot);$('#gresult').innerHTML=`<b class="${ok?'good':'bad'}">${ok?'Acertou! +10 pontos':'Não foi dessa vez!'}</b><p class="muted">Você marcou (${x}, ${y}). ${g.ex}</p>`;$('#gnext').hidden=false;update()}
+function safe(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function rankPage(){let arr=[];try{arr=JSON.parse(localStorage.getItem('spmath-rank')||'[]')}catch(e){}arr.sort((a,b)=>b.score-a.score);screen.innerHTML=`<section class="panel"><h2>🏆 Ranking deste aparelho</h2><p class="muted">Salve seu resultado para aparecer na lista local.</p><label for="player">Seu nome</label><input id="player" maxlength="18" placeholder="Digite seu nome"><button class="primary full" id="save">Salvar pontuação (${score} pontos)</button></section><section class="panel"><h3>🥇 Melhores resultados</h3>${arr.length?arr.slice(0,10).map((a,i)=>`<div class="rankrow"><span>${i+1}. ${safe(a.name)}</span><b>${a.score} pts</b></div>`).join(''):'<p class="muted">Ainda não há resultados salvos.</p>'}<p class="muted" style="font-size:12px">O ranking fica salvo apenas neste navegador e aparelho.</p></section>`;$('#save').onclick=()=>{const n=$('#player').value.trim();if(!n){$('#player').focus();return}arr.push({name:n,score});localStorage.setItem('spmath-rank',JSON.stringify(arr));rankPage()}}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{page=b.dataset.page;graphMode=false;show()}));
+document.addEventListener('click',e=>{const t=e.target.closest('[data-topic]');if(t){topicIndex=Number(t.dataset.topic);qIndex=0;locked=false;graphMode=false;page='quiz';show();return}if(e.target.id==='start'){page='quiz';topicIndex=0;qIndex=0;locked=false;graphMode=false;show()}if(e.target.id==='graphStart'){page='quiz';graphMode=true;graphQ=0;graphLocked=false;show()}if(e.target.matches('[data-answer]'))answer(Number(e.target.dataset.answer));if(e.target.id==='next')next();if(e.target.id==='back'||e.target.id==='gback'){page='lessons';graphMode=false;show()}if(e.target.id==='gnext'){graphQ++;graphLocked=false;if(graphQ>=graphQs.length){graphMode=false;screen.innerHTML=`<section class="panel" style="text-align:center"><div style="font-size:42px">🏆</div><h2>Treino de gráficos concluído!</h2><p class="muted">Você completou os cinco desafios de vértices.</p><button class="primary full" id="backHome">Voltar ao início</button></section>`}else graphPage()}if(e.target.id==='backHome'){page='home';show()}});
+show();
+</script>
+</body>
 </html>
